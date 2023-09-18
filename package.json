@@ -1,0 +1,26 @@
+{
+  "name": "nlp-es-comparison",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@elastic/elasticsearch": "^8.9.0",
+    "compromise": "^14.10.0",
+    "config": "^3.3.9",
+    "natural": "^6.7.1",
+    "node-nlp": "^4.27.0",
+    "vitest": "^0.34.4",
+    "wink-eng-lite-web-model": "^1.5.2",
+    "wink-nlp": "^1.14.3"
+  },
+  "devDependencies": {
+    "@types/natural": "^5.1.2",
+    "@types/node": "^20.6.2"
+  }
+}

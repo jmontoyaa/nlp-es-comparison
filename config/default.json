@@ -1,0 +1,6 @@
+{
+  "elastic": {
+    "username": "elastic",
+    "password": "changeme"
+  }
+}
