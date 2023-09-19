@@ -49,4 +49,6 @@ natural: **1.355 seconds**
 
 The script uses approximately 60.07445526123047 MB
 
-
+### nlp (some tuning is required as this stemmer separates "au revoir" into 2 parts)
+nlp: **381.159ms**
+The script uses approximately 162.9041519165039 MB
