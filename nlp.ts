@@ -15,7 +15,7 @@ let glossary = [
 
 try {
     const text = readFileSync('data/text-small.txt', 'utf-8');
-    let languageCode = 'en'; // ISO 639-1 language code for French
+    let languageCode = 'en'; // ISO 639-1 language code
 
     let stemmer = manager.container.get(`stemmer-${languageCode}`);
 

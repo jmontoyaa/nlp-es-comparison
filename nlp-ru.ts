@@ -1,7 +1,9 @@
-const natural = require('natural');
 import {readFileSync} from 'fs';
+const { NlpManager } = require('node-nlp');
+const languageCode = 'en'
+const manager = new NlpManager({ languages: [languageCode] });
 
-console.time("natural");
+console.time("nlp");
 
 let glossary = [
     {term: "node", caseSensitive: false},
@@ -12,26 +14,13 @@ let glossary = [
 ];
 
 try {
-    const text = readFileSync('data/text-small.txt', 'utf-8');
-    let languageCode = 'en'; // ISO 639-1 language code
+    const text = readFileSync('data/text-small-ru.txt', 'utf-8');
+    let languageCode = 'ru'; // ISO 639-1 language code
 
-    let stemmer;
-    switch (languageCode) {
-        case 'fr':
-            stemmer = natural.PorterStemmerFr;
-            break;
-        case 'es':
-            stemmer = natural.PorterStemmerEs;
-            break;
-        case 'en':
-        default: // default language is English
-            stemmer = natural.PorterStemmer;
-            break;
-    }
+    let stemmer = manager.container.get(`stemmer-${languageCode}`);
 
     // add loop of the same glossary term for tests
     for (let i = 0; i < 5000; i++) {
-        console.log(i)
         let stemmedText = stemmer.tokenizeAndStem(text)
 
         let matchingGlossaryTerms = glossary.filter(glossaryItem => {
@@ -49,7 +38,7 @@ try {
     console.error(err);
 }
 
-console.timeEnd("natural")
+console.timeEnd("nlp")
 
 const used = process.memoryUsage().heapUsed / 1024 / 1024;
 console.log(`The script uses approximately ${used} MB`);
