@@ -6,11 +6,13 @@ npm install
 ```
 
 ### Natural
+https://github.com/NaturalNode/natural/
 ```
 ts-node natural.ts
 ``` 
 
 ### nlp-node
+https://github.com/axa-group/nlp.js
 ```
 ts-node nlp.ts
 ``` 
@@ -53,7 +55,7 @@ natural: **3.5 seconds**
 
 The script uses approximately 124.1512680053711 MB
 
-### nlp 
+### nlp-node
 
 nlp: **381.159ms**
 The script uses approximately 162.9041519165039 MB
