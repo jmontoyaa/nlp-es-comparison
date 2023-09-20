@@ -48,15 +48,12 @@ The script uses approximately 25.92754364013672 MB
 elastic-chunks: **~3.524 seconds**
 The script uses approximately 26.654769897460938 MB
 
+### natural (using tokenizeAndStem())
+natural: **3.5 seconds**
 
-### natural
-natural: **1.355 seconds**
-
-The script uses approximately 60.07445526123047 MB
+The script uses approximately 124.1512680053711 MB
 
 ### nlp 
-
-_Note: (some tuning is required as this stemmer separates "au revoir" into 2 parts)_
 
 nlp: **381.159ms**
 The script uses approximately 162.9041519165039 MB

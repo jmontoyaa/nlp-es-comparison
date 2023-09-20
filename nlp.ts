@@ -28,20 +28,9 @@ try {
         let matchingGlossaryTerms = glossary.filter(glossaryItem => {
             const term = glossaryItem.term;
 
-            //let stemmedTerm = stemmer.stem(term)- // we can save the stemmed term in the DB
-            //|| stemmedText.includes(stemmedTerm)
-            //if (text.includes(term) || stemmedText.includes(term)) {
             if (stemmedText.includes(term)) {
                 return true;
             }
-
-            //let termLowerCase = term.toLowerCase() // should we lowercase the term in the DB?
-
-            /*if (stemmedText.includes(termLowerCase)) {
-                return true;
-            }*/
-
-            //let termLowerCase = glossaryItem.caseSensitive ? glossaryItem.term : glossaryItem.term.toLowerCase();
 
             return false;
         }).map(item => item.term);

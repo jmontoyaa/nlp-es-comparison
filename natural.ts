@@ -32,7 +32,7 @@ try {
     // add loop of the same glossary term for tests
     for (let i = 0; i < 5000; i++) {
         console.log(i)
-        let stemmedText = stemmer.stem(text)
+        let stemmedText = stemmer.tokenizeAndStem(text)
 
         let matchingGlossaryTerms = glossary.filter(glossaryItem => {
             const term = glossaryItem.term;
